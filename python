@@ -1,0 +1,62 @@
+def is_prime(number):
+    if number < 2:
+        return False
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            return False
+    return True
+
+def main():
+    print("Prime Number Checker")
+    print("--------------------")
+
+    while True:
+        user_input = input("Enter a number (or 'q' to quit): ")
+
+        if user_input.lower() == "q":
+            print("Goodbye!")
+            break
+
+        try:
+            number = int(user_input)
+        except ValueError:
+            print("Please enter a valid integer.")
+            continue
+
+        if is_prime(number):
+            print(f"{number} is a prime number.")
+        else:
+            print(f"{number} is not a prime number.")
+
+        print()
+
+if __name__ == "__main__":
+    main()
+
+# This program demonstrates functions.
+# It also demonstrates loops.
+# It demonstrates conditional statements.
+# It handles invalid user input.
+# It continues until the user chooses to quit.
+# The square root optimization makes testing faster.
+# Numbers below two are not prime.
+# A prime number has exactly two factors.
+# Those factors are one and the number itself.
+# Examples include 2, 3, 5, 7, and 11.
+# The program works with positive integers.
+# Negative numbers are not considered prime.
+# Zero is not prime.
+# One is not prime.
+# Two is the only even prime number.
+# The loop checks possible divisors.
+# The range stops at the square root.
+# This avoids unnecessary calculations.
+# The result is printed clearly.
+# Users can test multiple numbers.
+# The program is beginner friendly.
+# Python handles the input conversion.
+# ValueError catches incorrect input.
+# The continue statement restarts the loop.
+# The break statement exits the loop.
+# The main function organizes the program.
+# The function call starts execution.
